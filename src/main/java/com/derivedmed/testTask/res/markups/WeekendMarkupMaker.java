@@ -1,4 +1,4 @@
-package com.derivedmed.testTask.Res.markups;
+package com.derivedmed.testTask.res.markups;
 
 public class WeekendMarkupMaker implements MarkupMaker {
     public Markup makeMarkup() {

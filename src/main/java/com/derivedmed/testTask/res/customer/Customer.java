@@ -1,6 +1,6 @@
-package com.derivedmed.testTask.Res.customer;
+package com.derivedmed.testTask.res.customer;
 
-import com.derivedmed.testTask.Res.shop.Position;
+import com.derivedmed.testTask.res.shop.Position;
 
 import java.util.*;
 

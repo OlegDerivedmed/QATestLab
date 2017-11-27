@@ -1,7 +1,6 @@
-package com.derivedmed.testTask.Res.controllers;
+package com.derivedmed.testTask.res.controllers;
 
-import com.derivedmed.testTask.Res.markups.*;
-import com.derivedmed.testTask.Res.markups.*;
+import com.derivedmed.testTask.res.markups.*;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -25,7 +24,7 @@ public class MarkupController {
         if (gc.get(Calendar.HOUR_OF_DAY) >= 18 && gc.get(Calendar.HOUR_OF_DAY) < 20) {
             markup = new EveningMarkupMaker().makeMarkup();
         }else {
-            if (gc.get(Calendar.DAY_OF_WEEK) == 1 || gc.get(Calendar.DAY_OF_WEEK) == 7) {
+            if (gc.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY || gc.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
                 markup = new WeekendMarkupMaker().makeMarkup();
             }
         }

@@ -1,10 +1,12 @@
-package com.derivedmed.testTask.Res.shop;
+package com.derivedmed.testTask.res.shop;
 
-import com.derivedmed.testTask.Res.controllers.Mapper;
-import com.derivedmed.testTask.Res.controllers.MarkupController;
-import com.derivedmed.testTask.Res.markups.Markup;
+import com.derivedmed.testTask.res.controllers.Mapper;
+import com.derivedmed.testTask.res.controllers.MarkupController;
+import com.derivedmed.testTask.res.controllers.TimeController;
+import com.derivedmed.testTask.res.markups.Markup;
 
 import java.io.*;
+import java.sql.Time;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Map;
@@ -44,8 +46,9 @@ public class Shop {
      * @param gc
      */
     public Shop(GregorianCalendar gc) {
+        final String fullFilename = TimeController.PATH + "task.csv";
         universeTime = gc;
-        Mapper mapper = Mapper.getInstance("./src/main/resources/task.csv");
+        Mapper mapper = Mapper.getInstance(fullFilename);
         positions = mapper.getPositions();
     }
 
@@ -98,8 +101,9 @@ public class Shop {
     /**
      * Creating report about shop`s work.
      */
-    public void getInformation() {
-        try (FileWriter fileWriter = new FileWriter(new File("./src/main/resources/report.txt"));) {
+    public void createReport() {
+        final String fullFilename = TimeController.PATH + "report.txt";
+        try (FileWriter fileWriter = new FileWriter(new File(fullFilename));) {
             for (Position position : positions) {
                 fileWriter.write("Position name: " + position.getName() + ", sold: " + position.getSold() + ", bought: " + position.getBuyCount());
                 fileWriter.write(System.getProperty("line.separator"));

@@ -1,0 +1,10 @@
+Position name: ﻿Вода минеральная Хорошо, sold: 3154, bought: 3000
+Position name: Вода минеральная Хорошо, sold: 3257, bought: 3000
+Position name: Пиво Одесское Новое, sold: 3291, bought: 4500
+Position name: Красная испанка, sold: 3431, bought: 4500
+Position name: Сок Богач Грейпфрутовый, sold: 3176, bought: 4500
+Position name: Енерджи бум Плюс, sold: 3121, bought: 4500
+Position name: Мартини Биссе, sold: 3156, bought: 4500
+Position name: Два моря, sold: 3164, bought: 4500
+Proceeds : 148278
+BoughtPrice : 2503680

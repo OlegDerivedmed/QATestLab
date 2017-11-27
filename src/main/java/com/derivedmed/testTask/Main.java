@@ -1,8 +1,9 @@
 package com.derivedmed.testTask;
 
-import com.derivedmed.testTask.Res.controllers.Mapper;
-import com.derivedmed.testTask.Res.controllers.TimeController;
+import com.derivedmed.testTask.res.controllers.Mapper;
+import com.derivedmed.testTask.res.controllers.TimeController;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -13,5 +14,5 @@ public class Main {
         TimeController tc = new TimeController();
         tc.startEmulaiton();
         Mapper.writeData(tc.getData());
-     }
+    }
 }

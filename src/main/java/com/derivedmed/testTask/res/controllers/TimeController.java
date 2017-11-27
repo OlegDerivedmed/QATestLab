@@ -1,9 +1,10 @@
-package com.derivedmed.testTask.Res.controllers;
+package com.derivedmed.testTask.res.controllers;
 
-import com.derivedmed.testTask.Res.customer.Customer;
-import com.derivedmed.testTask.Res.shop.Position;
-import com.derivedmed.testTask.Res.shop.Shop;
+import com.derivedmed.testTask.res.customer.Customer;
+import com.derivedmed.testTask.res.shop.Position;
+import com.derivedmed.testTask.res.shop.Shop;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,6 +20,7 @@ public class TimeController {
     private GregorianCalendar gc;
     private int daysCount;
     private int hoursCount;
+    public static final String PATH = new File("").getAbsolutePath() + File.separator + "Resources" + File.separator;
 
     public List<Position> getData() {
         return data;
@@ -53,7 +55,7 @@ public class TimeController {
             }
             timeAdd();
         }
-        shop.getInformation();
+        shop.createReport();
         data = shop.getPositions();
         System.out.println(shop.getBoughtCount());
         System.out.println(shop.getSoldCount());

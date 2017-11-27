@@ -1,6 +1,6 @@
-package com.derivedmed.testTask.Res.shop;
+package com.derivedmed.testTask.res.shop;
 
-import com.derivedmed.testTask.Res.controllers.Mapper;
+import com.derivedmed.testTask.res.controllers.Mapper;
 
 import java.util.List;
 
